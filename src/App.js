@@ -8,14 +8,7 @@ import Missing from './Missing';
 import Nav from './Nav';
 import NewPost from './NewPost';
 import PostPage from './PostPage';
-import Post from './Post';
-import PostLayout from './PostLayout';
-import { useEffect, useState } from 'react';
-import { format } from 'date-fns';
-import api from "./api/posts"
 import EditPost from './EditPost';
-import useWindowSize from './hooks/useWindowSize';
-import useAxiosFetch from './hooks/useAxiosFetch';
 import { DataProvider } from './context/DataContext';
 
 
