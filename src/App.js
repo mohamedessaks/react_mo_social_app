@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <DataProvider>
-      <Header title={"Mohamed Social Media"} />
+      <Header title={"Thouseef & Shariq Blog"} />
      
       <Nav/>      
       <Routes>

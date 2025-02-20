@@ -9,6 +9,21 @@ import api from "../api/posts"
 const DataContext = createContext({})
 
 export const DataProvider=({children})=>{
+     const [sampleposts,setSammplePosts]=useState([
+      {
+        id: 1,
+        title: "1st post",
+        datetime: "July 16, 2021 11:47:39 AM",
+        body: "Welcome  to my blog...."
+      },
+      {
+        id: 2,
+        title: "Second post",
+        datetime: "July 16, 2021 11:47:48 AM",
+        body: "allah is most merciful and forgiving"
+      }
+     ])
+
 
     
   const [posts,setPosts]=useState([])  
@@ -22,8 +37,9 @@ export const DataProvider=({children})=>{
   const {width}=useWindowSize()
   const {data,fetchError,isLoading}=useAxiosFetch('http://localhost:3500/posts')
   useEffect(()=>{
-    setPosts(data)
-  },[data])
+    /*setPosts(data)*/
+    setPosts(sampleposts)
+  },[sampleposts])
 
 
 
