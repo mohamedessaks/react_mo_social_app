@@ -9,7 +9,7 @@ import api from "../api/posts"
 const DataContext = createContext({})
 
 export const DataProvider=({children})=>{
-     const [sampleposts,setSammplePosts]=useState([
+     const [sampleposts,setSamplePosts]=useState([
       {
         id: 1,
         title: "1st post",
@@ -39,6 +39,7 @@ export const DataProvider=({children})=>{
   useEffect(()=>{
     /*setPosts(data)*/
     setPosts(sampleposts)
+    setSamplePosts(sampleposts)
   },[sampleposts])
 
 
@@ -106,7 +107,7 @@ export const DataProvider=({children})=>{
 
 
     return (
-        <DataContext.Provider value={{width,search,setSearch,searchResult , fetchError,
+        <DataContext.Provider value={{width,search,setSearch,searchResult , fetchError,data,
          isLoading,handleSubmit,postTitle,setPostTitle,setPostBody,postBody,handleDelete,posts,
          handleEdit,editBody,setEditBody,editTitle,setEditTitle }}>
             {children}
