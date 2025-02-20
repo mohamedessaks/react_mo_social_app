@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useWindowSize from "../hooks/useWindowSize";
 import useAxiosFetch from "../hooks/useAxiosFetch";
 import { format } from "date-fns";
-import api from "../api/posts"
+/*import api from "../api/posts"*/
 
 
 const DataContext = createContext({})
